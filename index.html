@@ -23,7 +23,7 @@
             display: none;
             margin-top: 10px;
             background: rgba(89, 11, 11, 0.829);
-            padding:10px;
+            padding: 10px;
             border-radius: 5px;
         }
         #gatito {
@@ -44,20 +44,26 @@
     </style>
 </head>
 <body>
-    <h1>¡Holi! haz click el boton👀
-    </h1>
-    <button class="boton" onclick="mostrarGatito()"> Click✨</button>
+    <h1>¡Holi! haz click en el botón 👀</h1>
+    <button class="boton" onclick="mostrarGatito()">Click ✨</button>
+    
     <div id="contenedor">
         <img id="gatito" src="Cat.jpg" alt="Gatito con café">
-        <p><strong>Gracias por tus tips medicos, te mereces un café ☕</strong></p>
+        <p><strong>Gracias por tus tips médicos, te mereces un café ☕</strong></p>
     </div>
-    <audio id="musica" autoplay loop>
+
+    <audio id="musica" loop>
         <source src="song.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
+
     <script>
         function mostrarGatito() {
             document.getElementById('contenedor').style.display = 'block';
+            let audio = document.getElementById('musica');
+            if (audio.paused) {
+                audio.play().catch(error => console.log("Autoplay bloqueado: " + error));
+            }
         }
     </script>
 </body>
