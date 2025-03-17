@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatito y Café</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url('fond.gif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        #contenedor {
+            display: none;
+            margin-top: 10px;
+            background: rgba(89, 11, 11, 0.829);
+            padding:10px;
+            border-radius: 5px;
+        }
+        #gatito {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        .boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #600568e7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Holi! haz click el boton👀
+    </h1>
+    <button class="boton" onclick="mostrarGatito()"> Click✨</button>
+    <div id="contenedor">
+        <img id="gatito" src="Cat.jpg" alt="Gatito con café">
+        <p><strong>Gracias por tus tips medicos, te mereces un café ☕</strong></p>
+    </div>
+    <audio id="musica" autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <script>
+        function mostrarGatito() {
+            document.getElementById('contenedor').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
